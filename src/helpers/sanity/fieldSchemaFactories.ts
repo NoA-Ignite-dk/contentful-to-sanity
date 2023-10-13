@@ -156,10 +156,34 @@ export const imageFieldSchemaFactory = (name: string) =>
   createFactoryProxy<ImageSanityFieldSchema>({
     name,
     type: 'image',
+    fields: [
+      {
+        name: 'title',
+        type: 'string',
+        title: 'Title',
+      },
+      {
+        name: 'description',
+        type: 'string',
+        title: 'Description',
+      },
+    ],
   })
 
 export const fileFieldSchemaFactory = (name: string) =>
   createFactoryProxy<FileSanityFieldSchema>({
     name,
     type: 'file',
+    fields: [
+      {
+        name: 'title',
+        type: 'string',
+        title: 'Title',
+      },
+      {
+        name: 'description',
+        type: 'string',
+        title: 'Description',
+      },
+    ],
   })
