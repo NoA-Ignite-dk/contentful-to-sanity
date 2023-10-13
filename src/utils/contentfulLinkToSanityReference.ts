@@ -13,6 +13,8 @@ type ReferenceOrAsset =
   | {
       _type: 'file' | 'image'
       _sanityAsset: string
+      title?: string
+      description?: string
     }
 
 export function prefixUrl(url: string) {
@@ -47,6 +49,8 @@ export function contentfulLinkToSanityReference(
       return {
         _type: type,
         _sanityAsset: `${type}@${prefixUrl(file.url)}`,
+        title: asset.fields.title?.[locale],
+        description: asset.fields.description?.[locale],
       }
     }
 

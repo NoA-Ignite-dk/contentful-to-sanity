@@ -91,7 +91,7 @@ export type FileSanityFieldSchema = BaseSanityFieldSchema<
     sources?: any[] // @TODO Image source type?
   },
   {
-    fields?: LinkedType[]
+    fields?: AnySanityFieldSchema[]
   }
 >
 
@@ -109,7 +109,7 @@ export type ImageSanityFieldSchema = BaseSanityFieldSchema<
     sources?: any[] // @TODO Image source type?
   },
   {
-    fields?: LinkedType[]
+    fields?: AnySanityFieldSchema[]
   }
 >
 
